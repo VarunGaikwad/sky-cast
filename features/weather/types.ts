@@ -40,7 +40,7 @@ export interface CurrentWeather {
     wind_direction_10m: string;
   };
   current: {
-    time: number;
+    time: string;
     surface_pressure: number;
     is_day: number;
     interval: number;
@@ -75,13 +75,15 @@ export interface CurrentWeather {
     rain: string;
     temperature_2m: string;
     wind_speed_10m: string;
-  }
+  };
   hourly: {
+    is_day: number[];
+    weather_code: number[];
     rain: number[];
     time: string[];
     temperature_2m: number[];
     wind_speed_10m: number[];
-  }
+  };
 }
 
 export interface CitiesProp {
